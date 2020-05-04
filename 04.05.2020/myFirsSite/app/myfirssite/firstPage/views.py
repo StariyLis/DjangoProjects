@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
 def first(request):
-    return render(request, 'firstPage/index.html')
+    name = "World"
+    return render(request, 'firstPage/index.html', context={"name": name})
