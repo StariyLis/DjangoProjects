@@ -1,5 +1,12 @@
 from django.shortcuts import render
 
 def first(request):
-    name = "World"
-    return render(request, 'firstPage/index.html', context={"name": name})
+    return render(request, 'firstPage/first.html')
+
+
+def blog(request):
+    return render(request, 'firstPage/blog.html')
+
+
+def about(request):
+    return render(request, 'firstPage/about.html')

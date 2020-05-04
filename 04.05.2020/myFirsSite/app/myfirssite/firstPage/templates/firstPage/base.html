@@ -7,12 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{% static 'css/reset.css' %}">
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
-  <title>First page</title>
+  <link rel="stylesheet" href="{% static 'css/first.css' %}"}>
+
+  <title>
+    {% block title %}
+        Django site
+    {% endblock %}
+
+  </title>
 </head>
 <body>
   <div class="header">
-    <p class="hello">Hello {{ name }}!!!!</p>
+    <p class="hello">Hello World!!!</p>
     <p class="sub-hello">Это всё <b>Django</b></p>
+    <div class="main_menu">
+      <a href="http://127.0.0.1:5500">Home</a>
+      <a href="http://127.0.0.1:5500/blog">Blog</a>
+      <a href="http://127.0.0.1:5500/about">About</a>
+    </div>
   </div>
+    {% block content %}
+        text
+    {% endblock %}
 </body>
 </html>
