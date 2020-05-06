@@ -1,17 +1,25 @@
+/* colors */
+
+:root {
+  --green-theme-text: #002d00;
+  --green-theme-bg: lightgreen;
+}
+/* colors */
+
 .header {
   margin: auto;
   width: 99vw;
   height: 50px;
-  background-color: lightgreen;
+  background-color: var(--green-theme-bg);
   box-shadow: 0 2px 10px green;
   display: grid;
   grid-template-columns: 1fr, 100px, 1fr;
 }
 .sub-title {
-  color: #002d00;
+  color: var(--color-text);
   width: max-content;
-  margin: 10px auto 0 auto;
-  font-size: 20px;
+  margin: 10px auto 0 10%;
+  font-size: 27px;
   font-weight: 600;
   grid-column: 1/2;
 }
@@ -25,13 +33,13 @@
 }
 .main_menu a {
   width: 100%;
-  color: lightgreen;
+  color: var(--green-theme-bg);
   font-size: 18px;
   font-weight: 600;
   text-align: center;
   padding: 7px 0 5px 0;
   text-shadow: 0 0 4px #000000, 1px 1px 2px #000000;
-  border-right: 3px solid #002d00;
+  border-right: 3px solid var(--green-theme-text);
 }
 .main_menu a:last-child {
   border: none;
